@@ -398,7 +398,8 @@ whois_this() {
 #Download OUI database
 oui_download() {
 	echo "Downloading Nmap MAC prefixes..."
-	curl -# -S -f -k -o '/tmp/oui-raw.txt' 'https://linuxnet.ca/ieee/oui/nmap-mac-prefixes' || exit 2
+	#curl -# -S -f -k -o '/tmp/oui-raw.txt' 'https://linuxnet.ca/ieee/oui/nmap-mac-prefixes' || exit 2
+	curl -# -S -f -k -o '/tmp/oui-raw.txt' 'https://raw.githubusercontent.com/nmap/nmap/master/nmap-mac-prefixes' || exit 2
 
 	echo -e "\nApplying filters..."
 
